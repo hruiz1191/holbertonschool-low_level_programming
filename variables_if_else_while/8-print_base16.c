@@ -9,9 +9,9 @@ int main(void)
 	char num;
 	char min;
 
-	for ( num = '0'; num <= '9'; num++)
+	for (num = '0'; num <= '9'; num++)
 		putchar(num);
-	for ( min = 'a'; min <= 'f'; min++)
+	for (min = 'a'; min <= 'f'; min++)
 		putchar(min);
 	putchar ('\n');
 	return (0);
