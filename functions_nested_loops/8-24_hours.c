@@ -1,7 +1,7 @@
 #include "main.h"
 
-/*
- * jack_bauer- muestra en tiempo de 24 horas en minutos.
+/**
+ * jack_bauer - muestra en tiempo de 24 horas en minutos.
  *
  * @m minutos
  * @h hora
