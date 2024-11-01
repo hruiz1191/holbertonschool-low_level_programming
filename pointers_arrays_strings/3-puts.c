@@ -1,14 +1,14 @@
 #include "main.h"
- /**
-  * _puts - escribe un string en caracter
-  *
-  * @str: string de caracteres
-  **/
+/**
+ * _puts - coloca caracteres
+ * @str: string de caracteres
+ */
+
 void _puts(char *str)
 {
-	int i:
+	int i;
 
-		for (i = 0; srt[i] != '\0'; i++)
-			_putchaf(str[i]);
+		for (i = 0; str[i] != '\0'; i++)
+			_putchar(str[i]);
 	_putchar('\n');
 }
