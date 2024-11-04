@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 /**
  * memset - cambia memoria de un puntero por un caracter especifico
  * @s: puntero a modificar
@@ -11,7 +11,7 @@ char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; n > 0; i++)
 	{
 	s[i] = b;
 	}
