@@ -4,6 +4,7 @@
  * @dest: donde se va a copiar
  * @src: la fuente
  * @n: cantidad de caracteres a copiar
+ * Return: devuelve el destino
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
