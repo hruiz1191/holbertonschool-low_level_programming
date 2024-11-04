@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * memset - funcion
+ * _memset - funcion
  * @s: puntero a modificar
  * @b: variable a incluir
  * @n: numero de repeticiones deseadas
