@@ -4,7 +4,7 @@
 /**
  * _strchr - copia desde el caracter asignado
  * @s: la fuente de caracteres
- * @c el caracter a identificar
+ * @c: el caracter a identificar
  * Return: devuelve cadena de caracteres
  **/
 char *_strchr(char *s, char c)
