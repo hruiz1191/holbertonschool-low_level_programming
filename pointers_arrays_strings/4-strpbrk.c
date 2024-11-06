@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * _strpbrk- identifica cuantas veces se repite una letra
+ * _strpbrk - identifica una primera letra
  * @s: caracter entrado
  * @accept: caracteres deseados
+ * Return: devuelve caracteres restantes del string
  **/
 
 char *_strpbrk(char *s, char *accept)
