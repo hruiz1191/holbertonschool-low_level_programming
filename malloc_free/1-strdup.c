@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * create_array -
- * @size:
- * @c:
+ * _strdup - copia el contenido de un puntero a otro
+ * @str: caracteres a copiar
  * Return: return 0
  **/
 
