@@ -1,58 +1,41 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 /**
- * str_concat - une a 2 string
- * @s1: source 1
- * @s2: source 2
+ * str_concat - copia 2 punteros en 1
+ * @s1: puntero fuente 1
+ * @s2: puntero fuente 2
+ * Return:devuelve un puntero con la informacion de los 2 punteros
  **/
+
 char *str_concat(char *s1, char *s2)
 {
-	char *c;
-	int i, j, k, t, p;
+	char *concat_str;
+
+	int index, concat_index,  len;
+
+	concat_index = 0;
+	len = 0;
 
 	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	for (index = 0; s1[index] || s2[index]; index++)
+		len++;
+
+	concat_str = malloc(sizeof(char) * len);
+
+	if (concat_str == NULL)
 		return (NULL);
 
-	if( s2 == NULL)
-		return (NULL);
+	for (index = 0; s1[index]; index++)
+		concat_str[concat_index++] = s1[index];
 
-	for (i = 0; s1[i] != '\0'; i++)
-	{}
-	for (j = 0; s2[i] != '\0'; j++)
-	{}
-	
-	c = malloc((i * sizeof(s1) + 1) + (j + sizeof(s2 + 1)));
-	if (c == NULL)
-		return(NULL);
+	for (index = 0; s2[index]; index++)
+		concat_str[concat_index++] = s2[index];
 
-	t = i + j +1;
-	p = 1;
-	for (k = 0; k < t; k++)
-	{
-		if(p == 1)
-		{
-			while (s1[k] != '\0')
-			{
-				c[k] = s1[k];
-			}
-				p = 2;
-		}
-		else if(p == 2)
-			while (s2[k] != '\0')
-				c[k] = s2[k];
-		else
-			 c[k + 1] = s2[k + 1];
-	}
-	return (c);
+	return (concat_str);
 }
-
-
-
-
-
-
-
-
-
-
