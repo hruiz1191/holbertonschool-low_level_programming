@@ -3,9 +3,10 @@
 #include <stdlib.h>
 
 /**
- * _alloc_grid - dibuja un arreglo de 2 dimensiones
+ * alloc_grid - dibuja un arreglo de 2 dimensiones
  * @width: el ancho del arreglo
  * @height: el largo del arreglo
+ * Return: devuelve un grid
  **/
 
 int **alloc_grid(int width, int height)
