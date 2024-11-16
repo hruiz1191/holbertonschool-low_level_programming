@@ -1,51 +1,77 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
+/**
+ * _strlen - returns the lenght of a string
+ * @s: pointer to s
+ *
+ * Return: 0 on success
+ *
+ */
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s)
+	{
+		len++;
+		s++;
+	}
+	return (len);
+}
+/**
+ * _strdub  - duplica el string
+ * @str: pointer to duplicar
+ *
+ * Return: the pointer to str
+ *
+ */
+char *_strdub(char *str)
+{
+	char *res = NULL;
+	int i = 0;
+
+	if (str != NULL)
+	{
+		res = malloc(_strlen(str) + 1);
+		if (res != NULL)
+		{
+		for (i = 0; i <= _strlen(str); i++)
+			res[i] = str[i];
+		}
+	}
+	return (res);
+}
 
 /**
- * new_dog - nuevo Perro
- * @name: Nombre de perroe
- * @age: edad del perro
- * @owner: nombre de perro
- * Return: devuevve un puntero para perro nuevo
+ * new_dog - creates a new dog
+ * @name: name
+ * @age: age
+ * @owner: owner
+ * Return: pointer to new struct
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog *dogie;
-	int i, j, k;
-	char *cn, *co;
+	dog_t *new_d = NULL;
 
-	dogie = malloc(sizeof(struct dog));
-	if (dogie == NULL)
-		return (NULL);
-
-	for (i = 0; name[i] != '\0'; i++)
-		;
-	for (j = 0; owner[j] != '\0'; j++)
-		;
-
-	cn = malloc(sizeof(char) * i + 1);
-	if (cn == NULL)
+	new_d = malloc(sizeof(dog_t));
+	if (new_d == NULL)
 	{
-		free(dogie);
+		new_d->name = _strdub(name);
+	if (new_d->name == NULL)
+	{
+		free(new_d);
 		return (NULL);
 	}
 
-	co = malloc(sizeof(char) * j + 1);
-	if (co == NULL)
+	new_d->owner = _strdub(owner);
+	if (new_d->owner == NULL)
 	{
-		free(n);
-		free(dogie);
+		free(new_d->name);
+		free(new_d);
 		return (NULL);
 	}
-	for (k = 0; k <= i; k++)
-		cn[k] = name[k];
-	for (k = 0; k <= j; k++)
-		co[k] = owner[k];
-
-	dogie->name = cn;
-	dogie->age = age;
-	dogie->owner = co;
-
-	return (dogie);
+	new_d->age = age;
+	}
+	return (new_d);
 }
